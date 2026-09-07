@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Depuis 1979, une histoire à affiner</title>
+  <desc id="desc">Film patrimonial de la Fromagerie Antony</desc>
+  <defs>
+    <radialGradient id="light" cx="78%" cy="12%" r="80%">
+      <stop offset="0" stop-color="#fbe8bd"/>
+      <stop offset=".55" stop-color="#f4eddf"/>
+      <stop offset="1" stop-color="#dfc9a8"/>
+    </radialGradient>
+    <pattern id="grain" width="90" height="90" patternUnits="userSpaceOnUse">
+      <path d="M-10 30C20 4 58 56 100 23M-10 72C32 45 60 91 100 62" fill="none" stroke="#795637" stroke-opacity=".08" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#light)"/>
+  <rect width="1200" height="630" fill="url(#grain)"/>
+  <rect width="22" height="630" fill="#692b22"/>
+  <circle cx="1040" cy="100" r="52" fill="none" stroke="#8b3e2f" stroke-width="2"/>
+  <text x="1040" y="119" text-anchor="middle" font-family="Georgia,serif" font-size="54" fill="#8b3e2f">A</text>
+  <text x="94" y="110" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="6" fill="#8b3e2f">VIEUX-FERRETTE · ALSACE</text>
+  <text x="94" y="268" font-family="Georgia,serif" font-size="88" fill="#19130f">Depuis 1979,</text>
+  <text x="94" y="370" font-family="Georgia,serif" font-style="italic" font-size="88" fill="#8b3e2f">une histoire à affiner</text>
+  <line x1="94" y1="444" x2="154" y2="444" stroke="#8b3e2f" stroke-width="3"/>
+  <text x="94" y="510" font-family="Georgia,serif" font-size="28" fill="#4e4138">Une histoire de famille, de producteurs et de patience.</text>
+  <text x="94" y="562" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="3" fill="#19130f">FROMAGERIE ANTONY</text>
+</svg>

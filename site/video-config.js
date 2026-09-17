@@ -4,5 +4,5 @@
  * Exemple : pour https://youtu.be/AbCdEf12345, utilisez "AbCdEf12345".
  */
 window.ANTONY_FILM = Object.freeze({
-  youtubeVideoId: ""
+  youtubeVideoId: "cHHbh8POT_I"
 });

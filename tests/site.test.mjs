@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const html = await readFile(new URL("../site/index.html", import.meta.url), "utf8");
+const contact = await readFile(new URL("../public/antony-contact.vcf", import.meta.url), "utf8");
 const app = await readFile(new URL("../site/app.js", import.meta.url), "utf8");
 const config = await readFile(new URL("../site/video-config.js", import.meta.url), "utf8");
 
@@ -21,6 +22,22 @@ test("les textes et liens exigés sont présents", () => {
     "https://www.fromagerieantony.fr/",
     "https://www.fromagerieantony.fr/les-degustations/la-ceremonie-des-fromages/"
   ]) assert.ok(html.includes(expected), `Texte manquant : ${expected}`);
+});
+
+test("la page propose une vCard Antony complète", () => {
+  assert.match(html, /href="\/antony-contact\.vcf"/);
+  assert.match(html, /download="fromagerie-antony\.vcf"/);
+  for (const expected of [
+    "BEGIN:VCARD",
+    "VERSION:3.0",
+    "FN:Fromagerie Antony",
+    "ORG:Fromagerie Antony",
+    "TEL;TYPE=work,voice:+33389404222",
+    "5 rue de la Montagne",
+    "68480",
+    "https://www.fromagerieantony.fr/",
+    "END:VCARD"
+  ]) assert.ok(contact.includes(expected), `Donnée vCard manquante : ${expected}`);
 });
 
 test("aucun tracker, cookie applicatif ou formulaire n’est présent", () => {

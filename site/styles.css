@@ -143,6 +143,26 @@ h1 em {
   border: 0;
 }
 
+.film__cover {
+  position: absolute;
+  z-index: 3;
+  cursor: default;
+}
+
+.film__cover--top {
+  inset: 0 0 auto;
+  height: clamp(54px, 12%, 72px);
+  background: linear-gradient(#1d1713 0%, rgba(29, 23, 19, 0.96) 65%, transparent);
+}
+
+.film__cover--corner {
+  right: 0;
+  bottom: 0;
+  width: 54%;
+  height: clamp(66px, 18%, 96px);
+  background: linear-gradient(315deg, #1d1713 0%, rgba(29, 23, 19, 0.96) 58%, transparent);
+}
+
 .film__placeholder {
   display: grid;
   place-content: center;

@@ -15,7 +15,7 @@
   }
 
   const iframe = document.createElement("iframe");
-  iframe.title = "Depuis 1979, une histoire à affiner — Fromagerie Antony";
+  iframe.title = "Depuis 1979, une histoire qui s'affine — Fromagerie Antony";
   iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(videoId)}?autoplay=0&controls=1&rel=0&playsinline=1&disablekb=1&fs=0`;
   iframe.allow = "encrypted-media";
   iframe.loading = "lazy";

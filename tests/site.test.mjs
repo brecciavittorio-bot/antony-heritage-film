@@ -11,7 +11,7 @@ test("les textes et liens exigés sont présents", () => {
   for (const expected of [
     "Vieux-Ferrette · Alsace",
     "Depuis 1979,",
-    "une histoire à affiner",
+    "une histoire qui s'affine",
     "Une histoire de famille, de producteurs et de patience.",
     "Entrez dans les caves de la Fromagerie Antony.",
     "Découvrir la Fromagerie",

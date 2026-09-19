@@ -56,7 +56,7 @@ Le fichier est créé ici :
 public/qr/antony-heritage-qr.svg
 ```
 
-Le QR utilise des modules noirs, un fond ivoire, une zone calme de six modules et la correction d’erreur H. Le SVG est vectoriel et convient à une impression de **30 × 30 mm minimum**. Le QR doit toujours contenir l’URL de la landing, jamais celle de YouTube.
+Le QR utilise des modules noirs, un fond blanc, une zone calme de six modules et la correction d’erreur H. Le SVG est vectoriel et convient à une impression de **30 × 30 mm minimum**. Le QR doit toujours contenir l’URL de la landing, jamais celle de YouTube.
 
 ### Contrôle avant impression
 

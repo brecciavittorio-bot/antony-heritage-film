@@ -15,12 +15,12 @@ test("les textes et liens exigés sont présents", () => {
     "Une histoire de famille, de producteurs et de patience.",
     "Entrez dans les caves de la Fromagerie Antony.",
     "Découvrir la Fromagerie",
-    "La Cérémonie des fromages",
+    "Les tables qui nous font confiance",
     "5 rue de la Montagne",
     "68480 Vieux-Ferrette · France",
     "+33 (0)3 89 40 42 22",
     "https://www.fromagerieantony.fr/",
-    "https://www.fromagerieantony.fr/les-degustations/la-ceremonie-des-fromages/"
+    "https://www.fromagerieantony.fr/les-tables-qui-nous-font-confiance/"
   ]) assert.ok(html.includes(expected), `Texte manquant : ${expected}`);
 });
 

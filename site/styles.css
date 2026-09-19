@@ -143,6 +143,56 @@ h1 em {
   border: 0;
 }
 
+.film__fullscreen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 44px;
+  margin: 12px 0 0 auto;
+  padding: 10px 15px;
+  border: 1px solid var(--brick-dark);
+  background: var(--ivory-soft);
+  color: var(--brick-dark);
+  font: 700 0.82rem Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.film__fullscreen[hidden], .film__close[hidden] { display: none; }
+.film__fullscreen:hover, .film__fullscreen:focus-visible { background: var(--oak); }
+
+.film__close {
+  position: absolute;
+  z-index: 5;
+  top: max(16px, env(safe-area-inset-top));
+  right: max(16px, env(safe-area-inset-right));
+  min-height: 44px;
+  padding: 10px 15px;
+  border: 1px solid var(--ivory);
+  background: #1d1713;
+  color: var(--ivory);
+  font: 700 0.82rem Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.film__frame:fullscreen, .film__frame--expanded {
+  width: 100vw;
+  height: 100dvh;
+  aspect-ratio: auto;
+  border: 0;
+  background: #000;
+}
+
+.film__frame--expanded {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}
+
+.film-is-expanded { overflow: hidden; }
+.film-is-expanded .hero { overflow: visible; }
+.film-is-expanded .hero__inner { z-index: 1000; }
+
 .film__cover {
   position: absolute;
   z-index: 3;

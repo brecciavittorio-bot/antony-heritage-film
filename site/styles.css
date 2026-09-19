@@ -175,7 +175,7 @@ h1 em {
   cursor: pointer;
 }
 
-.film__frame:fullscreen, .film__frame--expanded {
+.film__frame--expanded {
   width: 100vw;
   height: 100dvh;
   aspect-ratio: auto;

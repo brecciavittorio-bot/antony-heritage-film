@@ -42,7 +42,7 @@
   closeButton.textContent = "Quitter le plein écran ×";
   closeButton.hidden = true;
 
-  const isExpanded = () => document.fullscreenElement === frame || frame.classList.contains("film__frame--expanded");
+  const isExpanded = () => frame.classList.contains("film__frame--expanded");
 
   const syncFullscreen = () => {
     const expanded = isExpanded();
@@ -50,30 +50,20 @@
     fullscreenButton.setAttribute("aria-expanded", String(expanded));
   };
 
-  const exitFullscreen = async () => {
-    if (document.fullscreenElement === frame) {
-      await document.exitFullscreen();
-    } else {
-      frame.classList.remove("film__frame--expanded");
-      document.body.classList.remove("film-is-expanded");
-      syncFullscreen();
-    }
+  const exitFullscreen = () => {
+    frame.classList.remove("film__frame--expanded");
+    document.body.classList.remove("film-is-expanded");
+    syncFullscreen();
     fullscreenButton.focus();
   };
 
-  fullscreenButton.addEventListener("click", async () => {
-    try {
-      if (!frame.requestFullscreen) throw new Error("Fullscreen API unavailable");
-      await frame.requestFullscreen();
-    } catch {
-      frame.classList.add("film__frame--expanded");
-      document.body.classList.add("film-is-expanded");
-    }
+  fullscreenButton.addEventListener("click", () => {
+    frame.classList.add("film__frame--expanded");
+    document.body.classList.add("film-is-expanded");
     syncFullscreen();
   });
 
   closeButton.addEventListener("click", exitFullscreen);
-  document.addEventListener("fullscreenchange", syncFullscreen);
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && frame.classList.contains("film__frame--expanded")) exitFullscreen();
   });
